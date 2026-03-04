@@ -1,7 +1,6 @@
 name: opencode-review
 
 on:
-  # Auto-review every PR on open / update
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
@@ -17,8 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
-    # Only run on non-draft PRs
-    if: github.event.pull_request.draft == false
+    # Only run automatically on internal PRs (same repo, not a fork) from non-bot actors.
+    # Fork PRs are reviewed on-demand via /oc comment in opencode-comment.yml instead.
+    # Dependabot PRs are skipped — they're reviewed via CI checks and human approval.
+    if: |
+      github.event.pull_request.draft == false &&
+      github.actor != 'dependabot[bot]' &&
+      github.event.pull_request.head.repo.full_name == github.repository
 
     permissions:
       id-token: write
